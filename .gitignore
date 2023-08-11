@@ -1,0 +1,4 @@
+.androidide/
+.git/
+.gradle/
+build/
