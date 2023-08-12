@@ -4,13 +4,14 @@ plugins {
 }
 
 android {
+    namespace "com.leo.lemonadeapp"
     compileSdk 33
     buildToolsVersion "33.0.0"
 
     defaultConfig {
         applicationId "com.leo.lemonadeapp"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
     }
@@ -28,7 +29,7 @@ android {
 	}
 	
 	kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
     
 	buildFeatures {

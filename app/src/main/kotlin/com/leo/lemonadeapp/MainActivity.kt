@@ -66,21 +66,6 @@ public class MainActivity : AppCompatActivity() {
      * This method determines the state and proceeds with the correct action.
      */
     private fun clickLemonImage() {
-        lemonadeState = when(lemonadeState) {
-            SELECT -> {
-                lemonadeState = SQUEEZE
-                lemonSize = lemonTree.pick()
-                squeezeCount = 0
-            }
-            SQUEEZE -> {
-                if (lemoSize > 0) {
-                    lemonSize -= 1
-                    squeezeCount += 1
-                } else {
-                    lemonadeState 
-                }
-            }
-        }
         // Changes the state of the lemonade after each user click
         if (lemonadeState == SELECT) {
             lemonadeState = SQUEEZE
@@ -113,15 +98,15 @@ public class MainActivity : AppCompatActivity() {
         
         // Select the corresponding text according to the lemonadeState from the 
         // string resource file.
-        var setText = when (lemonadeState) {
+        var text = when (lemonadeState) {
             SELECT -> R.string.lemon_select
             SQUEEZE -> R.string.lemon_squeeze
             DRINK -> R.string.lemon_drink
             else -> R.string.lemon_empty_glass
         }
         // Change the text of the textAction textView according to the value of the 
-        // setText variable
-        textAction.text = getString(setText)
+        // text variable
+        textAction.text = getString(text)
         
         // Select the corresponding image according to the lemonadeState from the drawable 
         // resources file.

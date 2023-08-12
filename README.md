@@ -12,7 +12,7 @@ Long tapping on the lemon shows the user the number of squeezes they made inorde
 * Using Android ConstraintLayout.
 
 ## Building the App
-This project was built using gradle 7.4.*
+This project was built using gradle 8.0.*
 
 ## Authors
-[leoemaxie](https://github.com/leoemaxie)
+[Leo Emaxie](https://github.com/leoemaxie)

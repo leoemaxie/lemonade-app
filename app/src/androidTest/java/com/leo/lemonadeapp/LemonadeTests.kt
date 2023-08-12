@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.lemonade
+package com.leo.lemonadeapp
 
 import androidx.test.core.app.launchActivity
 import androidx.test.espresso.Espresso.onView
