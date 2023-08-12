@@ -31,7 +31,6 @@ public class MainActivity : AppCompatActivity() {
     private var lemonSize = -1
     // Default the squeezeCount to -1
     private var squeezeCount = -1
-
     private var lemonTree = LemonTree()
     private var lemonImage: ImageView? = null
      
@@ -77,10 +76,7 @@ public class MainActivity : AppCompatActivity() {
                 lemonSize -= 1
                 squeezeCount += 1
             }
-            else {
-                lemonadeState = DRINK
-                lemonSize = -1
-            }
+            else lemonadeState = DRINK
         }
         else if (lemonadeState == DRINK) lemonadeState = RESTART
         else lemonadeState = SELECT
