@@ -72,8 +72,7 @@ public class MainActivity : AppCompatActivity() {
             lemonSize = lemonTree.pick()
             squeezeCount = 0
         }
-        
-        if (lemonadeState == SQUEEZE) {
+        else if (lemonadeState == SQUEEZE) {
             if (lemonSize > 0) {
                 lemonSize -= 1
                 squeezeCount += 1
@@ -83,9 +82,8 @@ public class MainActivity : AppCompatActivity() {
                 lemonSize = -1
             }
         }
-        
-        if (lemonadeState == DRINK) lemonadeState = RESTART
-        if (lemonadeState == RESTART) lemonadeState = SELECT
+        else if (lemonadeState == DRINK) lemonadeState = RESTART
+        else lemonadeState = SELECT
         
         setViewElements()
     }
@@ -96,7 +94,7 @@ public class MainActivity : AppCompatActivity() {
     private fun setViewElements() {
         val textAction: TextView = findViewById(R.id.text_action)
         
-        // Select the corresponding text according to the lemonadeState from the 
+        // Select the corresponding text according to the lemonadeState from the
         // string resource file.
         var text = when (lemonadeState) {
             SELECT -> R.string.lemon_select
@@ -104,8 +102,7 @@ public class MainActivity : AppCompatActivity() {
             DRINK -> R.string.lemon_drink
             else -> R.string.lemon_empty_glass
         }
-        // Change the text of the textAction textView according to the value of the 
-        // text variable
+        // Change the text of textAction to the value of the  text variable
         textAction.text = getString(text)
         
         // Select the corresponding image according to the lemonadeState from the drawable 
